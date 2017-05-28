@@ -27,9 +27,6 @@ return new Object[][]{{"https://mail.ru/"}};
 
 
 
-      /*  String userMail = loginPage.login("multik83@bk.ru", "J3qq4H7h2v").getUserMail();
-        Assert.assertEquals(userMail, "multik83@bk.ru");
-*/
 
 
 

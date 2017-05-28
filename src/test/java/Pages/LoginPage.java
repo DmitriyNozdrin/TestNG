@@ -22,11 +22,11 @@ public class LoginPage extends BasePage {
     private WebElement loginButton;
 
 
-    public void login(User user) throws InterruptedException {
+    public void login(User user) {
         inputLogin.sendKeys(user.mail);
         inputPassword.sendKeys(user.password);
         loginButton.click();
-        Thread.sleep(10000);
+        //   Thread.sleep(10000);
 
     }
 

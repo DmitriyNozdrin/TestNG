@@ -36,3 +36,9 @@ task ChromeTest(type: Test) {
         suites "src\\test\\resources\\testng-suite.xml"
     }
 }
+task IETest(type: Test) {
+    systemProperty "driver", "ie";
+    useTestNG() {
+        suites "src\\test\\resources\\testng-suite.xml"
+    }
+}
