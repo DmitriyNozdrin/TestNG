@@ -1,6 +1,7 @@
 package Driver;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -99,4 +100,17 @@ public class MyDriver implements WebDriver {
 
 
     }
+
+    public    void scrollUp() {
+        ((JavascriptExecutor)driver).executeScript("window.scrollTo(0,0)"); //scroll up
+
+    }
+    /**
+     * Scroll Down
+     */
+    public     void scrollDown() {
+        ((JavascriptExecutor)driver).executeScript("window.scrollTo(0,document.body.scrollHeight)");
+//scroll down
+    }
+
 }

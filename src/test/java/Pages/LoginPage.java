@@ -1,6 +1,8 @@
 package Pages;
 
+import Steps.LoginSteps;
 import Utils.User;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -10,6 +12,9 @@ import org.openqa.selenium.support.FindBy;
 
 
 public class LoginPage extends BasePage {
+
+    Logger log = Logger.getLogger(LoginPage.class);
+
 
     @FindBy(id = "mailbox__login")
 
@@ -23,6 +28,9 @@ public class LoginPage extends BasePage {
 
 
     public void login(User user) {
+        driver.scrollDown();
+        driver.scrollUp();
+        log.info("User name " + user.name + " mail - "+user.mail);
         inputLogin.sendKeys(user.mail);
         inputPassword.sendKeys(user.password);
         loginButton.click();

@@ -20,6 +20,7 @@ return new Object[][]{{"https://mail.ru/"}};
     public void testName() throws InterruptedException {
 
         app.login.loginValidUser();
+
         Assert.assertEquals(app.mail.getUserMail(), validUser.mail);
 
 
